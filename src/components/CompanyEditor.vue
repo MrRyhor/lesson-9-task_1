@@ -1,5 +1,5 @@
 <template>
-    <div class="editor-container" v-if="getParams">
+    <div v-if="getParams" class="editor-container">
         <label
             >Name:
             <input v-model="editingCompany.name" type="text" />
@@ -18,7 +18,7 @@
         </label>
         <button type="button" @click="onSaveClick(editingCompany)">Save</button>
     </div>
-    <div class="editor-container" v-else>
+    <div v-else class="editor-container">
         <label
             >Name:
             <input v-model="nameInp" type="text" />

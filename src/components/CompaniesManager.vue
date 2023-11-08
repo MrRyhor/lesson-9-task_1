@@ -1,6 +1,6 @@
 <template>
     <companies-filter />
-    <companies-list :companiesData="getFilteredByOwnerCompaniesList" />
+    <companies-list :companies-data="getFilteredByOwnerCompaniesList" />
 </template>
 <script>
 import CompaniesList from './CompaniesList.vue'

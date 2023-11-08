@@ -1,13 +1,13 @@
 <template>
     <h1>Companies list:</h1>
-    <hr>
-    <div class="list-container" v-if="companiesData.length">
+    <hr />
+    <div v-if="companiesData.length" class="list-container">
         <company-item v-for="company in companiesData" :key="company.id" :company="company" />
     </div>
     <div v-else>No Results</div>
-    <hr>
+    <hr />
     <div class="create-btn">
-        <button type="button" @click = "onCreateClick">Create Company</button>
+        <button type="button" @click="onCreateClick">Create Company</button>
     </div>
 </template>
 <script>
@@ -21,16 +21,16 @@ export default {
     props: {
         companiesData: {
             type: Array,
-            default: () => []
-        }
+            default: () => [],
+        },
     },
 
     methods: {
-        onCreateClick(){
+        onCreateClick() {
             this.$router.push({
-                name: 'company'
+                name: 'company',
             })
-        }
+        },
     },
 }
 </script>
@@ -39,17 +39,18 @@ export default {
     max-width: 700px;
     padding-left: 50px;
 }
-.create-btn{
+.create-btn {
     margin-top: 10px;
     float: left;
     padding-left: 50px;
-     button {
-        cursor: pointer;padding: 5px;
-     }
-     button:hover {
-            background-color: rgb(77, 77, 77);
-            color: white;
-        }
+    button {
+        cursor: pointer;
+        padding: 5px;
+    }
+    button:hover {
+        background-color: rgb(77, 77, 77);
+        color: white;
+    }
 }
 h1 {
     text-align: left;
